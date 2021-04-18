@@ -1,5 +1,5 @@
 import "./App.scss";
-import CoockieCourses from "./pages/coockieCourses/CoockieCourses";
+// import CoockieCourses from "./pages/coockieCourses/CoockieCourses";
 import TomasRhythm from "./pages/TomasRhythm/TomasRhythm";
 
 function App() {
