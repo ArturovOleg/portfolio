@@ -1,0 +1,56 @@
+.d-f {
+  display: flex;
+}
+
+.ai-c {
+  align-items: center;
+}
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 140px 25px 140px 25px;
+  margin: 0 auto;
+}
+
+@for $i from 0 through 110 {
+  .m-#{$i} {
+    margin: $i + 0px;
+  }
+
+  .mt-#{$i} {
+    margin-top: $i + 0px;
+  }
+
+  .mr-#{$i} {
+    margin-right: $i + 0px;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $i + 0px;
+  }
+
+  .ml-#{$i} {
+    margin-left: $i + 0px;
+  }
+}
+
+@for $w from 0 through 100 {
+  .w-#{$w} {
+    width: $w + 0%;
+  }
+}
