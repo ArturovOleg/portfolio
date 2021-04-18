@@ -1,0 +1,328 @@
+$bg-poster: #a1a1a1;
+$bg-lite: #fff;
+$bg-dark: #020202;
+$bg-grey: #f8f8f8;
+$title-color-1: #fff;
+$title-color-2: #111111;
+$text-color: #777777;
+$page-border-color: #ececec;
+$icon-color: #111111;
+
+.wrapper {
+  font-family: "opensans";
+
+  .poster {
+    background-color: $bg-poster;
+    background: url(../../images/TomasRhythm/header-bg.png) no-repeat center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: $title-color-1;
+    position: relative;
+
+    .info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .posterTitle {
+        font-family: "dosis";
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 60px;
+        font-size: 30px;
+        white-space: nowrap;
+      }
+
+      .posterDescript {
+        font-weight: 300;
+        margin-top: 100px;
+        font-size: 20px;
+        opacity: 0.7;
+      }
+    }
+
+    .buttonDown {
+      background-color: #fff;
+      border-radius: 2px;
+      width: 25px;
+      height: 25px;
+      transform: rotate(45deg) translateX(-50%);
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      border: none;
+      display: block;
+      outline: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .inner {
+          &::before {
+            height: 8px;
+            right: 5px;
+            top: 2px;
+            transition: all 0.3s ease;
+          }
+
+          &::after {
+            height: 8px;
+            right: 8px;
+            top: 5px;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+
+      .inner {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 6px;
+          width: 2px;
+          background-color: #474849;
+          right: 5px;
+          top: 1px;
+          border-radius: 1px;
+          transition: all 0.3s ease;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 6px;
+          width: 2px;
+          background-color: #474849;
+          right: 7px;
+          top: 3px;
+          transform: rotate(90deg);
+          border-radius: 1px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  .about {
+    background-color: $bg-lite;
+    border-bottom: 1px solid $page-border-color;
+
+    .aboutStudio {
+      text-transform: uppercase;
+      color: $title-color-2;
+      font-family: "dosis";
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 10px;
+    }
+
+    .cardsWrapper {
+      margin-top: 80px;
+
+      .card {
+        width: calc(100% / 3);
+        margin-right: 25px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        .quoteText {
+          font-size: 24px;
+          font-weight: 300;
+          color: $text-color;
+          line-height: 38px;
+        }
+
+        .quoteCaption {
+          color: $text-color;
+          font-size: 11px;
+          margin-top: 35px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .cardText {
+          min-height: 164px;
+          max-height: 200px;
+        }
+
+        .cardParagraph {
+          font-weight: 300;
+          color: $text-color;
+          font-size: 15px;
+          line-height: 26px;
+        }
+
+        .teamPhoto {
+          width: 100%;
+          height: auto;
+          transition: all 0.5s ease;
+        }
+
+        .personInfo {
+          margin-top: 100px;
+          position: relative;
+
+          &:hover {
+            .teamPhoto {
+              filter: blur(5px);
+              transition: all 0.5s ease;
+            }
+
+            .information {
+              opacity: 0.7;
+              z-index: 1;
+              transition: all 0.5s ease;
+            }
+          }
+
+          .information {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            background-color: $bg-lite;
+            transition: all 0.5s ease;
+            padding: 30px;
+            color: $title-color-2;
+            text-transform: uppercase;
+            font-family: "dosis";
+
+            .titleInfo {
+              font-size: 18px;
+              letter-spacing: 5px;
+              text-align: center;
+            }
+
+            .subscripion {
+              font-family: "opensans";
+              text-transform: none;
+              font-size: 14px;
+            }
+
+            .scale {
+              height: 15px;
+              background-color: $bg-poster;
+              border-radius: 2px;
+
+              .percent {
+                height: 100%;
+                background-color: $bg-dark;
+              }
+            }
+          }
+        }
+
+        .teamCaption {
+          font-family: "dosis";
+          font-size: 15px;
+          text-transform: uppercase;
+          color: $text-color;
+          letter-spacing: 5px;
+          font-weight: 300;
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        .teamProf {
+          font-family: "dosis";
+          font-size: 12px;
+          text-transform: uppercase;
+          color: $text-color;
+          letter-spacing: 5px;
+          font-weight: 300;
+          text-align: center;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .services {
+    background-color: $bg-lite;
+
+    .servicesMainTitle {
+      text-transform: uppercase;
+      color: $title-color-2;
+      font-family: "dosis";
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 10px;
+      text-align: center;
+    }
+
+    .servicesItems {
+      margin-top: 100px;
+
+      .servicesItem {
+        color: $icon-color;
+        opacity: 0.5;
+        text-align: center;
+        transition: all 0.5s ease;
+
+        .icon {
+          font-size: 50px;
+          transition: all 0.5s ease;
+        }
+
+        .servicesTitle {
+          text-transform: uppercase;
+          font-family: "dosis";
+          font-weight: 400;
+          font-size: 14px;
+          letter-spacing: 5px;
+          transition: all 0.5s ease;
+        }
+
+        &:hover {
+          opacity: 1;
+          transition: all 0.5s ease;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .servicesText {
+      .servicesColumn {
+        width: calc(100% / 3);
+        margin-right: 10px;
+      }
+
+      :last-child {
+        margin-right: 0;
+      }
+
+      .quoteText {
+        font-size: 24px;
+        font-weight: 300;
+        color: $text-color;
+        line-height: 38px;
+      }
+
+      .quoteCaption {
+        color: $text-color;
+        font-size: 11px;
+        margin-top: 35px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .servicesParagraph {
+        font-weight: 300;
+        color: $text-color;
+        font-size: 15px;
+        line-height: 26px;
+      }
+    }
+  }
+}
