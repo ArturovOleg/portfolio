@@ -8,6 +8,7 @@ import teamImg1 from "../../assests/images/TomasRhythm/team-img-1.jpg";
 import teamImg2 from "../../assests/images/TomasRhythm/team-img-2.jpg";
 import teamImg3 from "../../assests/images/TomasRhythm/team-img-3.jpg";
 import Services from "../../components/ThomasRhythm/ServicesBlock/Services";
+import LookingForBlock from "../../components/ThomasRhythm/LookingForBlock/LookingForBlock";
 
 const TomasRhythm = () => {
   const Items = [
@@ -87,6 +88,7 @@ const TomasRhythm = () => {
         <Poster />
         <About cards={team} />
         <Services />
+        <LookingForBlock />
       </main>
     </>
   );
