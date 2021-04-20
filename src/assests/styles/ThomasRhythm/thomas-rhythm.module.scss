@@ -284,7 +284,8 @@ $icon-color: #111111;
           transition: all 0.5s ease;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           opacity: 1;
           transition: all 0.5s ease;
           cursor: pointer;
@@ -293,6 +294,19 @@ $icon-color: #111111;
     }
 
     .servicesText {
+      position: relative;
+
+      &.visible {
+        opacity: 1;
+        transition: left .8s ease, opacity 1s ease-in;
+        left: 0%;
+      }
+
+      &.hidden {
+        opacity: 0;
+        left: 100%;
+      }
+
       .servicesColumn {
         width: calc(100% / 3);
         margin-right: 10px;
