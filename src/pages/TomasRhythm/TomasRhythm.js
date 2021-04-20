@@ -7,6 +7,7 @@ import About from "../../components/ThomasRhythm/About/About";
 import Services from "../../components/ThomasRhythm/ServicesBlock/Services";
 import Tabs from "../../shared/Tabs/Tabs";
 import {MenuItems, team, servicesTabsData} from "../../components/ThomasRhythm/constants";
+import LookingForBlock from "../../components/ThomasRhythm/LookingForBlock/LookingForBlock";
 
 const TomasRhythm = () => {
 
@@ -18,6 +19,8 @@ const TomasRhythm = () => {
         <About cards={team} />
         <Services servicesTabsData={servicesTabsData}/>
         <Tabs />
+        <Services />
+        <LookingForBlock />
       </main>
     </>
   );
